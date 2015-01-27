@@ -110,7 +110,8 @@ h4,
 h5,
 h6,
 li,
-span {
+span,
+ul {
 	margin-top: 0;
 	margin-bottom: 0;
 	line-height: 1;
@@ -178,7 +179,6 @@ HEADER
 }
 
 .logo {
-	display: inline-block;
 	font-family: 'Lobster', cursive;
 	font-size: 67px;
 	float: left;
@@ -196,8 +196,8 @@ HEADER
 
 .header-right {
 	margin-top: 39px;
-	float: left;
-	width: 39%;
+	float: right;
+	width: 30%;
 }
 
 .header-tel {
@@ -332,6 +332,7 @@ SEC-1
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
+	max-width: 354px;
 	width: 100%;
 	font-size: 49px;
 	color: #55330b;
@@ -339,8 +340,8 @@ SEC-1
 	border: none;
 	font-family: 'archiveregular';
 	border: 2px solid #e8e8e8;
-		height: 105px;
-		margin-bottom: 21px;
+	height: 105px;
+	margin-bottom: 21px;
 }
 
 
@@ -662,6 +663,15 @@ SEC-7
 	width: 25%;
 }
 
+.step-block-digit {
+	color: #fff;
+	font-size: 60px;
+	position: absolute;
+	top: 45px;
+	left: 0;
+	right: 0;
+}
+
 .step-block:after {
 	position: absolute;
 	top: 57px;
@@ -698,11 +708,11 @@ SEC-8
 	padding-left: 43px;
 	padding-right: 43px;
 	padding-bottom: 55px;
-
 }
 
 .sec-8-left {
-	width: 621px;
+	max-width: 621px;
+	width: 100%;
 	float: left;
 }
 
@@ -712,10 +722,12 @@ SEC-8
 	font-size: 16px;
 	width: 33%;
 	margin-top: 40px;
+	margin-bottom: 15px;
 }
 
 .adress-list-header {
 	font-family: 'helveticaneuecyrbold'!important;
+	margin-top: 5px;
 }
 
 .adress-list li {
@@ -730,12 +742,13 @@ SEC-8
 }
 
 .sec-8-right {
-	width: 315px;
+	max-width: 315px;
+	width: 100%;
 	float: right;
 }
 
 .form-question {
-	margin-top: 52px;
+	margin-top: 62px;
 	margin-bottom: 12px;
 	font-size: 44px;
 	text-align: center;
@@ -855,11 +868,21 @@ RESPONSIVE
 ********************/
 
 @media (max-width: 768px) {
+
+	.logo {
+		float: none;
+	}
+
 	.header-right,
 	.header-left {
 		margin-top: 0;
 		width: 100%;
 		text-align: center;
+	}
+
+	.discript-header-txt {
+		float: none;
+		border-left: none;
 	}
 
 	.header-tel {
@@ -907,11 +930,14 @@ RESPONSIVE
 	.choose-us-block:nth-of-type(2),
 	.choose-us-block:last-of-type {
 		max-width: none;
+		text-align: center;
 	}
 
 	.choose-us-img {
 		max-width: 40%;
 		height: auto;
+		float: none;
+		margin-right: 0;
 	}
 
 	.choose-us-block p {
@@ -1029,9 +1055,15 @@ RESPONSIVE
 	.step-block-txt {
 		margin-bottom: 25px;
 	}
+
+	.sec-5-txt:before,
+	.sec-5-txt:after {
+		border-width: 0;
+	}
 }
 
 @media (min-width: 769px) and (max-width: 1000px) {
+
 	.discript-header-txt {
 		margin-top: 0;
 		margin-left: 0;
@@ -1042,12 +1074,44 @@ RESPONSIVE
 		width: 50%;
 	}
 
-	.sec-1-form-block {
+	.sec-1-form-block,
+	.sec-5-form-block,
+	.sec-5-left {
 		width: 50%;
+	}
+
+	.sec-5-header {
+		margin-bottom: 0;
+	}
+
+	.arrow {
+		right: 0;
+	}
+
+	.sec-5-txt:before,
+	.sec-5-txt:after {
+		border-width: 0;
+	}
+
+	.sec-5-txt {
+		font-size: 50px;
 	}
 
 	.sec-1-txt-block-top h3 {
 		font-size: 34px;
+	}
+
+	.choose-us-block:first-of-type,
+	.choose-us-block:nth-of-type(2),
+	.choose-us-block:last-of-type {
+		max-width: none;
+		width: 33%;
+		text-align: center;
+	}
+
+	.choose-us-img {
+		float: none;
+		margin-right: 0;
 	}
 
 	.sec-5-header {
@@ -1061,5 +1125,47 @@ RESPONSIVE
 
 	.sec-5-txt {
 		margin-left: 0;
+	}
+
+}
+
+@media (max-width: 1040px) {
+	.sec-8-left,
+	.sec-8-right {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.adress-list {
+		float: none;
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	.sec-7-header {
+		font-size: 34px;
+		margin-bottom: 35px;
+		margin-top: 35px;
+	}
+
+	.sec-6-header {
+		font-size: 30px;
+	}
+
+	.sec-1-form-btn, .sec-5-form-btn {
+		font-size: 40px;
+		height: 70px;
+	}
+
+	.choose-us-img {
+		max-width: none;
+	}
+
+	.sec-3-header {
+		font-size: 36px;
 	}
 }
