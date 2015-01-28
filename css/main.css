@@ -603,35 +603,37 @@ SEC-6
 	font-family: 'helveticaneuecyrbold';
 }
 
-.adv-block {
+.advantages-block {
 	margin-bottom: 68px;
 	float: left;
 }
 
-.adv-block:nth-child(odd) {
+.advantages-block:nth-child(odd) {
 	width: 42%;
+	min-height: 1px;
 }
 
-.adv-block:nth-child(even) {
+.advantages-block:nth-child(even) {
 	width: 58%;
+	min-height: 1px;
 }
 
-.adv-block:last-child {
+.advantages-block:last-child {
 	margin-bottom: 173px;
 }
 
-.adv-block img {
+.advantages-block img {
 	margin-right: 35px;
 	float: left;
 }
 
-.adv-block-txt {
+.advantages-block-txt {
 	margin-top: 46px;
 	font-size: 22px;
 	text-transform: uppercase;
 }
 
-.adv-block-txt span {
+.advantages-block-txt span {
 	font-weight: bold;
 }
 
