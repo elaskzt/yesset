@@ -175,12 +175,16 @@ HEADER
 	margin-top: 12px;
 	margin-bottom: 28px;
 	float: left;
-	width: 61%;
+	width: 68%;
 }
 
 .logo {
 	font-family: 'Lobster', cursive;
 	font-size: 67px;
+	float: left;
+}
+
+.logo-img {
 	float: left;
 }
 
@@ -197,7 +201,7 @@ HEADER
 .header-right {
 	margin-top: 39px;
 	float: right;
-	width: 30%;
+	max-width: 210px;
 }
 
 .header-tel {
@@ -876,11 +880,17 @@ RESPONSIVE
 		float: none;
 	}
 
+	.logo-img {
+		float: none;
+	}
+
 	.header-right,
 	.header-left {
 		margin-top: 0;
 		width: 100%;
 		text-align: center;
+		float: none;
+		max-width: none;
 	}
 
 	.discript-header-txt {
@@ -1065,13 +1075,18 @@ RESPONSIVE
 	}
 }
 
-@media (min-width: 769px) and (max-width: 1000px) {
-
+@media (min-width: 769px) and (max-width: 1047px) {
 	.discript-header-txt {
 		margin-top: 0;
 		margin-left: 0;
 		line-height: 1;
 	}
+	.logo {
+		float: none;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
 
 	.sec-1-left {
 		width: 50%;
